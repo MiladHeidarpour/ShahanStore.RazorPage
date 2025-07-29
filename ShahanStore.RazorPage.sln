@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShahanStore.RazorPage", "ShahanStore.RazorPage\ShahanStore.RazorPage.csproj", "{8580A09A-5EF7-4772-ABE5-200066996A50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8580A09A-5EF7-4772-ABE5-200066996A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8580A09A-5EF7-4772-ABE5-200066996A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8580A09A-5EF7-4772-ABE5-200066996A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8580A09A-5EF7-4772-ABE5-200066996A50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E96333C-9C8B-4B12-8D8E-002BF75417C1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+﻿@model Microsoft.AspNetCore.Http.IFormFile
+
+<div class="mb-3">
+    <label asp-for="@Model" class="form-label"></label>
+    <input type="file" asp-for="@Model" id="example-fileinput" class="form-control">
+    <div class="form-control.is-invalid">
+        <span asp-validation-for="@Model"></span>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model ShahanStore.RazorPage.Models.Commands.Categories.EditCategoryDto
+
+<form asp-page="Index" asp-page-handler="EditPartial" method="post">
+    <div class="card">
+        <div class="card-header border-bottom border-dashed">
+            <h4 class="card-title">اطلاعات مربوط به دسته‌بندی : @Model.Title</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-6" hidden>
+                    @Html.EditorFor(c=>c.Id)
+                </div>
+                <div class="col-lg-6">
+                    @Html.EditorFor(c => c.Title)
+                </div>
+                <div class="col-lg-6">
+                    @Html.EditorFor(c => c.Slug)
+                </div>
+                @Html.EditorFor(c => c.SeoData)
+                <div class="col-lg-6">
+                    @Html.EditorFor(c => c.IsDeleted)
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer border-top border-dashed text-end">
+            <div class="d-flex justify-content-end gap-1">
+                <button type="submit" class="btn btn-primary">ویرایش دسته‌بندی</button>
+                <a data-bs-dismiss="modal" class="btn btn-danger"> لغو</a>
+            </div>
+        </div>
+    </div>
+</form>

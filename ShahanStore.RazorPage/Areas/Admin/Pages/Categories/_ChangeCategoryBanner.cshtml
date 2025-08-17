@@ -1,0 +1,32 @@
+﻿@using ShahanStore.RazorPage.Models.Commands.Categories
+@model ChangeCategoryBannerDto
+
+<form asp-page="Index" asp-page-handler="ChangeBannerPartial" method="post" enctype="multipart/form-data">
+    <div class="card">
+        <div class="card-header border-bottom border-dashed d-flex align-items-center">
+            <h4 class="header-title">بارگذاری پرونده</h4>
+        </div>
+        <!-- end card-body -->
+        <div class="card-body">
+            <div class="dz-message needsclick">
+                <i class="ti ti-cloud-upload h1 text-muted"></i>
+                <h3>برای بارگذاری کلیک کنید.</h3>
+            </div>
+            <p class="text-muted">
+                برای ویرایش بنر دسته‌بندی ،فایل مورد نظر را بارگذاری نمایید.
+            </p>
+            <div class="col-lg-6" hidden>
+                @Html.EditorFor(c => c.CategoryId)
+            </div>
+            <div class="col-lg-6">
+                @Html.EditorFor(c => c.BannerImg)
+            </div>
+            <div class="card-footer border-top border-dashed text-end">
+                <div class="d-flex justify-content-end gap-1">
+                    <button type="submit" class="btn btn-primary">ویرایش ‌بنر</button>
+                    <a data-bs-dismiss="modal" class="btn btn-danger"> لغو</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

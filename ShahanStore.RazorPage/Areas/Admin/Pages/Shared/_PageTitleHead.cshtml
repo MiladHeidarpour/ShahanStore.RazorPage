@@ -1,0 +1,26 @@
+﻿@using ShahanStore.RazorPage.Infrastructure.ViewModels
+@model PageHeaderModel
+
+<div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
+    <div class="flex-grow-1">
+        <h4 class="fs-18 text-uppercase fw-bold mb-0">@ViewData["Title"]</h4>
+    </div>
+
+    <div class="text-end">
+        <ol class="breadcrumb m-0 py-0">
+            @foreach (var item in Model.Breadcrumbs)
+            {
+                if (item.IsActive)
+                {
+                    <li class="breadcrumb-item active">@item.Text</li>
+                }
+                else
+                {
+                    <li class="breadcrumb-item">
+                        <a href="@item.Url">@item.Text</a>
+                    </li>
+                }
+            }
+        </ol>
+    </div>
+</div>

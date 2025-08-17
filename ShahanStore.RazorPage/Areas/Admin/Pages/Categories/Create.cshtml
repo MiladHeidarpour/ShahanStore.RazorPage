@@ -1,0 +1,62 @@
+﻿@page
+@using ShahanStore.RazorPage.Infrastructure.ViewModels
+@model ShahanStore.RazorPage.Areas.Admin.Pages.Categories.CreateModel
+@{
+    var siteSeo = new PageHeaderModel()
+    {
+        Title = "افزودن دسته‌بندی",
+        Breadcrumbs = new List<BreadcrumbItem>
+        {
+        new BreadcrumbItem { Text = "دشبرد", Url = "/Admin" },
+        new BreadcrumbItem { Text = "دسته‌بندی ها",Url = "/Admin/Categories"},
+        new BreadcrumbItem { Text = "افزودن دسته‌بندی", IsActive = true }
+        }
+    };
+
+    ViewData["Title"] = siteSeo.Title;
+}
+
+@await Html.PartialAsync("_PageTitleHead", siteSeo)
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <form method="post" enctype="multipart/form-data">
+            <div class="card">
+                <div class="card-header border-bottom border-dashed">
+                    <h4 class="card-title">اطلاعات مربوط به دسته‌بندی</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            @Html.EditorFor(c => c.Input.Title)
+                        </div>
+                        <div class="col-lg-6">
+                            @Html.EditorFor(c => c.Input.Slug)
+                        </div>
+                        <div class="col-lg-6">
+                            @Html.EditorFor(c => c.Input.BannerImg)
+                        </div>
+                        <div class="col-lg-6">
+                            @Html.EditorFor(c => c.Input.Icon)
+                        </div>
+                        @Html.EditorFor(c => c.Input.SeoData)
+                    </div>
+                </div>
+
+                <div class="card-footer border-top border-dashed text-end">
+                    <div class="d-flex justify-content-end gap-1">
+                        <button type="submit" class="btn btn-primary">ایجاد محصول</button>
+                        <a href="" class="btn btn-danger"> لغو</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

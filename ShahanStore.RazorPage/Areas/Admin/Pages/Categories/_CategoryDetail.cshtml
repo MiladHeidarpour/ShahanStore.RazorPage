@@ -1,0 +1,57 @@
+﻿@using ShahanStore.RazorPage.Infrastructure
+@using ShahanStore.RazorPage.Models.Queries.Categories
+@model CategoryDto 
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="row g-0 align-items-center">
+            <div class="col-md-4">
+                @if (Model.Icon is null)
+                {
+                    <img api-src="@($"{AppDirectories.CategoryIcon}/Nabi_icon.jpg")"
+                         alt="@Model.Title"
+                         class="img-fluid rounded-start"
+                         modal-page="Index"
+                         modal-page-handler="ChangeIconPartial"
+                         modal-route-id="@Model.Id" />
+                }
+                else
+                {
+                    <img api-src="@($"{AppDirectories.CategoryIcon}/{Model.Icon}")"
+                         alt="@Model.Title"
+                         class="img-fluid rounded-start"
+                         modal-page="Index"
+                         modal-page-handler="ChangeIconPartial"
+                         modal-route-id="@Model.Id" />
+                }
+            </div>
+            <div class="col-md-4">
+                <div class="card-body">
+                    <h5 class="card-title">نام دسته‌بندی : @Model.Title</h5>
+                    <p class="card-text">اسلاگ : @Model.Slug</p>
+                    <p class="card-text"><small class="text-muted">آخرین به روز شده 3 دقیقه پیش</small></p>
+                </div> <!-- end card-body-->
+            </div> <!-- end col -->
+            <div class="col-md-4">
+                @if (Model.BannerImg is null)
+                {
+                    <img api-src="@($"{AppDirectories.CategoryBanner}/Nabi_banner.jpeg")"
+                         alt="@Model.Title"
+                         class="img-fluid rounded-end"
+                         modal-page="Index"
+                         modal-page-handler="ChangeBannerPartial"
+                         modal-route-id="@Model.Id" />
+                }
+                else
+                {
+                    <img api-src="@($"{AppDirectories.CategoryBanner}/{Model.BannerImg}")"
+                         alt="@Model.Title"
+                         class="img-fluid rounded-end"
+                         modal-page="Index"
+                         modal-page-handler="ChangeBannerPartial"
+                         modal-route-id="@Model.Id" />
+                }
+            </div> <!-- end col -->
+        </div> <!-- end row-->
+    </div> <!-- end card-->
+</div> <!-- end col-->

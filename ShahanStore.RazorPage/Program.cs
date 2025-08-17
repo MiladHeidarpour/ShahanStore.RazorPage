@@ -1,7 +1,15 @@
-var builder = WebApplication.CreateBuilder(args);
+using ShahanStore.RazorPage.Infrastructure;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddLogging();
 // Add services to the container.
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
+#region  DependencyInjection
+
+builder.Services.AddUIDependency(builder.Configuration);
+
+#endregion
 
 var app = builder.Build();
 

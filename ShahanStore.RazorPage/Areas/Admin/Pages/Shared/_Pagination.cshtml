@@ -1,0 +1,28 @@
+﻿@using ShahanStore.RazorPage.Models.Queries.Categories
+@model CategoryFilterResult
+
+
+<div class="card-footer">
+    <div class="d-flex justify-content-end">
+        <ul class="pagination mb-0 justify-content-center">
+            <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
+                <a href="#" class="page-link" onclick="changePageId(@(Model.CurrentPage - 1)); return false;">
+                    <i class="ti ti-chevrons-left"></i>
+                </a>
+            </li>
+
+            @for (int i = Model.StartPage; i <= Model.EndPage; i++)
+            {
+                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                    <a href="" class="page-link" onclick="changePageId(@i); return false;">@i</a>
+                </li>
+            }
+
+            <li class="page-item @(Model.CurrentPage == Model.PageCount ? "disabled" : "")">
+                <a href="#" class="page-link" onclick="changePageId(@(Model.CurrentPage + 1)); return false;">
+                    <i class="ti ti-chevrons-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

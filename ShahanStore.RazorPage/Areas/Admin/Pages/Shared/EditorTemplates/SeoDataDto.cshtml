@@ -1,0 +1,58 @@
+﻿@using ShahanStore.RazorPage.Models.Bases
+@model SeoDataDto
+
+<div class="col-lg-6">
+    <div class="mb-3">
+        <label asp-for="@Model.MetaTitle" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.MetaTitle">
+        <span asp-validation-for="@Model.MetaTitle" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="mb-3">
+        <label asp-for="@Model.Canonical" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.Canonical">
+        <span asp-validation-for="@Model.Canonical" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="mb-3">
+        <label asp-for="@Model.OgTitle" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.OgTitle">
+        <span asp-validation-for="@Model.OgTitle" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="mb-3">
+        <label asp-for="@Model.OgDescription" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.OgDescription">
+        <span asp-validation-for="@Model.OgDescription" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="mb-3">
+        <label asp-for="@Model.OgImage" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.OgImage">
+        <span asp-validation-for="@Model.OgImage" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="mb-3">
+        <label asp-for="@Model.Schema" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.Schema">
+        <span asp-validation-for="@Model.Schema" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="mb-3">
+        <label asp-for="@Model.MetaDescription" class="form-label"></label>
+        <textarea class="form-control" asp-for="@Model.MetaDescription" rows="5"></textarea>
+        <span asp-validation-for="@Model.MetaTitle" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="form-check form-switch mt-5">
+        <input asp-for="@Model.IndexPage" type="checkbox" class="form-check-input" id="customSwitch1">
+        <label asp-for="@Model.IndexPage" class="form-check-label" for="customSwitch1"></label>
+    </div>
+</div>

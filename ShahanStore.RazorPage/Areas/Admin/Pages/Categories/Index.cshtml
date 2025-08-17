@@ -1,0 +1,86 @@
+﻿@page "{handler?}"
+@using ShahanStore.RazorPage.Infrastructure.ViewModels
+@using ShahanStore.RazorPage.Models.Queries.Categories
+@model ShahanStore.RazorPage.Areas.Admin.Pages.Categories.IndexModel
+@{
+    var siteSeo = new PageHeaderModel()
+    {
+        Title = "دسته‌بندی ها",
+        Breadcrumbs = new List<BreadcrumbItem>
+        {
+        new BreadcrumbItem { Text = "دشبرد", Url = "/Admin" },
+        new BreadcrumbItem { Text = "دسته‌بندی ها", IsActive = true }
+        }
+    };
+
+    Layout = "Shared/_AdminLayout";
+    ViewData["Title"] = siteSeo.Title;
+}
+
+@await Html.PartialAsync("_PageTitleHead", siteSeo)
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header border-bottom border-light">
+                <form asp-page="Index" method="get">
+                    <div class="row justify-content-between g-3">
+                        <div class="col-lg-6">
+                            <div class="row g-3">
+                                <div class="col-lg-6">
+                                    <div class="position-relative">
+                                        <input asp-for="Search" type="text" class="form-control ps-4" placeholder="جستجو دسته بندی">
+                                        <i class="ti ti-search position-absolute top-50 translate-middle-y ms-2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="flex-grow-1 d-flex align-items-center">
+                                        <label for="status-select" class="me-2">وضعیت</label>
+                                        <div class="flex-grow-1">
+                                            <select asp-for="Status" class="form-select my-1 my-md-0 " data-toggle="select2" id="status-select" data-select2-id="status-select" tabindex="-1" aria-hidden="true">
+                                                <option value="null">همه</option>
+                                                <option value="@Status.Active">فعال</option>
+                                                <option value="@Status.NotActive">غیرفعال</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="text-md-end mt-3 mt-md-0">
+                                <a asp-page="Create" type="button" class="btn btn-dark waves-effect waves-light me-1"><i class="ti ti-plus me-1"></i>افزودن دسته‌بندی</a>
+                                <button type="submit" class="btn btn-success  waves-effect waves-light"><i class="ti ti-filter me-1"></i> فیلترها</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <partial name="_CategoryList" model="@Model.FilterResult.Data" />
+            @* <div id="categoryContainer">
+                             @await Html.PartialAsync("_CategoryList", Model.FilterResult?.Data) 
+                </div>*@
+
+
+            <partial name="_Pagination" model="@Model.FilterResult" />
+            @*<div id="paginationContainer">
+                <partial name="_Pagination" model="@Model.FilterResult" />
+                 @await Html.PartialAsync("_Pagination", Model.FilterResult) 
+            </div>*@
+
+        </div> <!-- end card-->
+    </div><!-- end col -->
+</div>
+<partial name="_Modal" />
+
+
+@section Scripts {
+
+    <script>
+        $(document).ready(function() {
+            $('#select').select2();
+        });
+    </script>
+}

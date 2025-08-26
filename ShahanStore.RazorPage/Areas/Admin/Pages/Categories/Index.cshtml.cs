@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShahanStore.RazorPage.Infrastructure.RazorUtils;
+using ShahanStore.RazorPage.Models.Bases;
 using ShahanStore.RazorPage.Models.Commands.Categories;
 using ShahanStore.RazorPage.Models.Queries.Categories;
 using ShahanStore.RazorPage.Services.Categories;

@@ -1,10 +1,8 @@
 ﻿using ShahanStore.RazorPage.Models.Bases;
 
-namespace ShahanStore.RazorPage.Models.Queries.Categories;
+namespace ShahanStore.RazorPage.Models.Queries.Brands;
 
-public sealed record CategoryFilterParams(
-    //Guid? CategoryId,
-    //string? Slug,
+public sealed record BrandFilterParams(
     string? Search,
     Status? Status,
     int PageId = 1,

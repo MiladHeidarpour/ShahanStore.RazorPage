@@ -35,8 +35,8 @@ public class CategoryService(HttpClient client, ILogger<CategoryService> logger)
 
     public async Task<ApiResult> DeleteCategory(Guid id)
     {
-        var result = await client.DeleteAsync($"Category/{id}");
-        return await result.Content.ReadFromJsonAsync<ApiResult>();
+        var response = await client.DeleteAsync($"Category/{id}");
+        return await response.ToApiResult();
     }
 
 

@@ -1,216 +1,256 @@
 ﻿<!-- Sidenav Menu Start -->
 <div class="sidenav-menu">
 
-<!-- Brand Logo -->
-<a href="index.html" class="logo">
-    <span class="logo-light">
-        <span class="logo-lg"><img src="/Admin/assets/images/logo.png" alt="logo"></span>
-        <span class="logo-sm text-center"><img src="/Admin/assets/images/logo-sm.png" alt="small logo"></span>
-    </span>
+    <!-- Brand Logo -->
+    <a href="index.html" class="logo">
+        <span class="logo-light">
+            <span class="logo-lg"><img src="/Admin/assets/images/logo.png" alt="logo"></span>
+            <span class="logo-sm text-center"><img src="/Admin/assets/images/logo-sm.png" alt="small logo"></span>
+        </span>
 
-    <span class="logo-dark">
-        <span class="logo-lg"><img src="/Admin/assets/images/logo-dark.png" alt="dark logo"></span>
-        <span class="logo-sm text-center"><img src="/Admin/assets/images/logo-sm.png" alt="small logo"></span>
-    </span>
-</a>
+        <span class="logo-dark">
+            <span class="logo-lg"><img src="/Admin/assets/images/logo-dark.png" alt="dark logo"></span>
+            <span class="logo-sm text-center"><img src="/Admin/assets/images/logo-sm.png" alt="small logo"></span>
+        </span>
+    </a>
 
-<!-- Sidebar Hover Menu Toggle Button -->
-<button class="button-sm-hover">
-    <i class="ti ti-circle align-middle"></i>
-</button>
+    <!-- Sidebar Hover Menu Toggle Button -->
+    <button class="button-sm-hover">
+        <i class="ti ti-circle align-middle"></i>
+    </button>
 
-<!-- Full Sidebar Menu Close Button -->
-<button class="button-close-fullsidebar">
-    <i class="ti ti-x align-middle"></i>
-</button>
+    <!-- Full Sidebar Menu Close Button -->
+    <button class="button-close-fullsidebar">
+        <i class="ti ti-x align-middle"></i>
+    </button>
 
-<div data-simplebar>
+    <div data-simplebar>
 
-    <!--- Sidenav Menu -->
-    <ul class="side-nav">
+        <!--- Sidenav Menu -->
+        <ul class="side-nav">
 
-        <li class="side-nav-item">
-            <a href="index.html" class="side-nav-link">
-                <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
-                <span class="menu-text"> دشبرد</span>
-                <span class="badge bg-success rounded-pill">5</span>
-            </a>
-        </li>
+            <li class="side-nav-item">
+                <a href="index.html" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-text"> دشبرد</span>
+                    <span class="badge bg-success rounded-pill">5</span>
+                </a>
+            </li>
 
-        <li class="side-nav-title mt-2"> اپلیکیشن و صفحات </li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarManagement" aria-expanded="false"
+                   aria-controls="sidebarManagement" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-basket-filled"></i></span>
+                    <span class="menu-text"> مدیریت </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarManagement">
+                    <ul class="sub-menu">
+                        <li class="side-nav-item">
+                            <a href="/Admin/Categories" class="side-nav-link">
+                                <span class="menu-text"> دسته‌بندی ها </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="/Admin/Brands" class="side-nav-link">
+                                <span class="menu-text"> برند ها </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>
 
-        <li class="side-nav-item">
-            <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
-               aria-controls="sidebarEcommerce" class="side-nav-link">
-                <span class="menu-icon"><i class="ti ti-basket-filled"></i></span>
-                <span class="menu-text"> ایکامرس </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <div class="collapse" id="sidebarEcommerce">
-                <ul class="sub-menu">
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-products.html" class="side-nav-link">
-                            <span class="menu-text"> محصولات </span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-products-grid.html" class="side-nav-link">
-                            <span class="menu-text"> شبکه محصولات </span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-product-details.html" class="side-nav-link">
-                            <span class="menu-text"> جزییات محصول </span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-products-add.html" class="side-nav-link">
-                            <span class="menu-text"> افزودن محصول </span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-categories.html" class="side-nav-link">
-                            <span class="menu-text">دسته بندی</span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-orders.html" class="side-nav-link">
-                            <span class="menu-text">سفارشات</span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-order-details.html" class="side-nav-link">
-                            <span class="menu-text">جزییات سفارش</span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-customers.html" class="side-nav-link">
-                            <span class="menu-text">مشتریان</span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="apps-ecommerce-sellers.html" class="side-nav-link">
-                            <span class="menu-text">فروشندگان</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
+           @*  <li class="side-nav-item">
+                <a href="/Admin/Categories" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-text">دسته‌بندی ها</span>
+                    <span class="badge bg-success rounded-pill">5</span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="/Admin/Brands" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-text">برند ها‌</span>
+                    <span class="badge bg-success rounded-pill">5</span>
+                </a>
+            </li> *@
+
+            <li class="side-nav-title mt-2"> اپلیکیشن و صفحات </li>
+
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
+                   aria-controls="sidebarEcommerce" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-basket-filled"></i></span>
+                    <span class="menu-text"> ایکامرس </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarEcommerce">
+                    <ul class="sub-menu">
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-products.html" class="side-nav-link">
+                                <span class="menu-text"> محصولات </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-products-grid.html" class="side-nav-link">
+                                <span class="menu-text"> شبکه محصولات </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-product-details.html" class="side-nav-link">
+                                <span class="menu-text"> جزییات محصول </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-products-add.html" class="side-nav-link">
+                                <span class="menu-text"> افزودن محصول </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-categories.html" class="side-nav-link">
+                                <span class="menu-text">دسته بندی</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-orders.html" class="side-nav-link">
+                                <span class="menu-text">سفارشات</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-order-details.html" class="side-nav-link">
+                                <span class="menu-text">جزییات سفارش</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-customers.html" class="side-nav-link">
+                                <span class="menu-text">مشتریان</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="apps-ecommerce-sellers.html" class="side-nav-link">
+                                <span class="menu-text">فروشندگان</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
 
 
-        <li class="side-nav-title mt-2">کامپوننت ها</li>
+            <li class="side-nav-title mt-2">کامپوننت ها</li>
 
-        <li class="side-nav-item">
-            <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false"
-               aria-controls="sidebarExtendedUI" class="side-nav-link">
-                <span class="menu-icon"><i class="ti ti-alien-filled"></i></span>
-                <span class="menu-text">رابط کاربری پشرفته</span>
-                <span class="menu-arrow"></span>
-            </a>
-            <div class="collapse" id="sidebarExtendedUI">
-                <ul class="sub-menu">
-                    <li class="side-nav-item">
-                        <a href="extended-dragula.html" class="side-nav-link">
-                            <span class="menu-text">دراگولا</span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="extended-sweetalerts.html" class="side-nav-link">
-                            <span class="menu-text">سوییت الرت</span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="extended-ratings.html" class="side-nav-link">
-                            <span class="menu-text">ریتینگ</span>
-                        </a>
-                    </li>
-                    <li class="side-nav-item">
-                        <a href="extended-scrollbar.html" class="side-nav-link">
-                            <span class="menu-text">اسکرولبار</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-
-
-        <li class="side-nav-title mt-2">
-            بیشتر
-        </li>
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false"
+                   aria-controls="sidebarExtendedUI" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-alien-filled"></i></span>
+                    <span class="menu-text">رابط کاربری پشرفته</span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarExtendedUI">
+                    <ul class="sub-menu">
+                        <li class="side-nav-item">
+                            <a href="extended-dragula.html" class="side-nav-link">
+                                <span class="menu-text">دراگولا</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="extended-sweetalerts.html" class="side-nav-link">
+                                <span class="menu-text">سوییت الرت</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="extended-ratings.html" class="side-nav-link">
+                                <span class="menu-text">ریتینگ</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="extended-scrollbar.html" class="side-nav-link">
+                                <span class="menu-text">اسکرولبار</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
 
 
-        <li class="side-nav-item">
-            <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false"
-               aria-controls="sidebarMultiLevel" class="side-nav-link">
-                <span class="menu-icon"><i class="ti ti-box-multiple-3"></i></span>
-                <span class="menu-text"> چند لایه </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <div class="collapse" id="sidebarMultiLevel">
-                <ul class="sub-menu">
-                    <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false"
-                           aria-controls="sidebarSecondLevel" class="side-nav-link">
-                            <span class="menu-text"> لایه دوم</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <div class="collapse" id="sidebarSecondLevel">
-                            <ul class="sub-menu">
-                                <li class="side-nav-item">
-                                    <a href="javascript: void(0);" class="side-nav-link">
-                                        <span class="menu-text">مورد 1</span>
-                                    </a>
-                                </li>
-                                <li class="side-nav-item">
-                                    <a href="javascript: void(0);" class="side-nav-link">
-                                        <span class="menu-text">مورد 2</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false"
-                           aria-controls="sidebarThirdLevel" class="side-nav-link">
-                            <span class="menu-text"> لایه سوم</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <div class="collapse" id="sidebarThirdLevel">
-                            <ul class="sub-menu">
-                                <li class="side-nav-item">
-                                    <a href="javascript: void(0);" class="side-nav-link">مورد 1</a>
-                                </li>
-                                <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarFourthLevel"
-                                       aria-expanded="false" aria-controls="sidebarFourthLevel"
-                                       class="side-nav-link">
-                                        <span class="menu-text">مورد 2 </span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <div class="collapse" id="sidebarFourthLevel">
-                                        <ul class="sub-menu">
-                                            <li class="side-nav-item">
-                                                <a href="javascript: void(0);" class="side-nav-link">
-                                                    <span class="menu-text">مورد 2.1</span>
-                                                </a>
-                                            </li>
-                                            <li class="side-nav-item">
-                                                <a href="javascript: void(0);" class="side-nav-link">
-                                                    <span class="menu-text">مورد 2.2</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
+            <li class="side-nav-title mt-2">
+                بیشتر
+            </li>
 
-    <div class="clearfix"></div>
-</div>
+
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false"
+                   aria-controls="sidebarMultiLevel" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-box-multiple-3"></i></span>
+                    <span class="menu-text"> چند لایه </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarMultiLevel">
+                    <ul class="sub-menu">
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false"
+                               aria-controls="sidebarSecondLevel" class="side-nav-link">
+                                <span class="menu-text"> لایه دوم</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarSecondLevel">
+                                <ul class="sub-menu">
+                                    <li class="side-nav-item">
+                                        <a href="javascript: void(0);" class="side-nav-link">
+                                            <span class="menu-text">مورد 1</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="javascript: void(0);" class="side-nav-link">
+                                            <span class="menu-text">مورد 2</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false"
+                               aria-controls="sidebarThirdLevel" class="side-nav-link">
+                                <span class="menu-text"> لایه سوم</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarThirdLevel">
+                                <ul class="sub-menu">
+                                    <li class="side-nav-item">
+                                        <a href="javascript: void(0);" class="side-nav-link">مورد 1</a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a data-bs-toggle="collapse" href="#sidebarFourthLevel"
+                                           aria-expanded="false" aria-controls="sidebarFourthLevel"
+                                           class="side-nav-link">
+                                            <span class="menu-text">مورد 2 </span>
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <div class="collapse" id="sidebarFourthLevel">
+                                            <ul class="sub-menu">
+                                                <li class="side-nav-item">
+                                                    <a href="javascript: void(0);" class="side-nav-link">
+                                                        <span class="menu-text">مورد 2.1</span>
+                                                    </a>
+                                                </li>
+                                                <li class="side-nav-item">
+                                                    <a href="javascript: void(0);" class="side-nav-link">
+                                                        <span class="menu-text">مورد 2.2</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        <div class="clearfix"></div>
+    </div>
 </div>
 <!-- Sidenav Menu End -->

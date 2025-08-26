@@ -1,4 +1,5 @@
-﻿using ShahanStore.RazorPage.Services.Categories;
+﻿using ShahanStore.RazorPage.Services.Brands;
+using ShahanStore.RazorPage.Services.Categories;
 using System.Configuration;
 
 namespace ShahanStore.RazorPage.Infrastructure;
@@ -10,6 +11,12 @@ public static class DependencyInjection
     {
         
         services.AddHttpClient<ICategoryService, CategoryService>(httpClient =>
+        {
+            string? baseAddress = configuration.GetValue<string>("ApiService:BaseUrl");
+            httpClient.BaseAddress = new Uri(baseAddress!);
+        });
+
+        services.AddHttpClient<IBrandService, BrandService>(httpClient =>
         {
             string? baseAddress = configuration.GetValue<string>("ApiService:BaseUrl");
             httpClient.BaseAddress = new Uri(baseAddress!);

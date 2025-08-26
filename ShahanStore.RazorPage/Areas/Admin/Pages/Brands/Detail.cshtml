@@ -1,0 +1,25 @@
+﻿@page "{id}"
+@using ShahanStore.RazorPage.Infrastructure.ViewModels
+@model ShahanStore.RazorPage.Areas.Admin.Pages.Brands.DetailModel
+@{
+    var siteSeo = new PageHeaderModel()
+    {
+        Title = "جزئیات برند",
+        Breadcrumbs = new List<BreadcrumbItem>
+        {
+        new BreadcrumbItem { Text = "دشبرد", Url = "/Admin" },
+        new BreadcrumbItem { Text = "برند ها",Url = "/Admin/Brands"},
+        new BreadcrumbItem { Text = $"جزئیات برند {Model.Brand.Name}", IsActive = true }
+        }
+    };
+
+    ViewData["Title"] = siteSeo.Title;
+}
+
+@await Html.PartialAsync("_PageTitleHead", siteSeo)
+<div class="row">
+
+    <partial name="_BrandDetail" model="@Model.Brand" />
+
+</div>
+<partial name="_Modal" />
